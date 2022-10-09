@@ -7,9 +7,19 @@ function date() {
   let date = Date();
   document.getElementById("text").innerHTML =
     "Today's Date Is " + date + "I am the manager";
-
-  // document.body.style.backgroundColor = "red";
 }
+const d = new Date();
+let dayOfTheWeek = d.getDay();
+function love() {
+  if (dayOfTheWeek == 0) {
+    dayOfTheWeek = "Sunday";
+  } else if ((dayOfTheWeek = 1)) {
+    dayOfTheWeek = "Monday";
+  }
+  document.getElementById("days").innerHTML = "Today is " + dayOfTheWeek;
+}
+
+// document.body.style.backgroundColor = "red";
 
 // function off() {
 //   document.getElementsByTagName("button")[0].style.backgroundColor = "blue";
