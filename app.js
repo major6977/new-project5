@@ -5,16 +5,15 @@ for (var i = 0; i < cars.length; i++) {
 
 function date() {
   let date = Date();
-  document.getElementById("text").innerHTML =
-    "Today's Date Is " + date + "I am the manager";
+  document.getElementById("text").innerHTML = "Today's Date Is " + date;
 }
 const d = new Date();
-let dayOfTheWeek = d.getDay();
+let dayOfTheWeek = d.getDay() + 1;
 function love() {
   if (dayOfTheWeek == 0) {
     dayOfTheWeek = "Sunday";
-  } else if ((dayOfTheWeek = 1)) {
-    dayOfTheWeek = "Monday";
+  } else if (dayOfTheWeek) {
+    dayOfTheWeek = "Thursday" + dayOfTheWeek;
   }
   document.getElementById("days").innerHTML = "Today is " + dayOfTheWeek;
 }
