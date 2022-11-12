@@ -41,6 +41,41 @@
     <h1 id="eatMe"></h1>
     <div id="fart"></div>
 
+    <!-- Start Calculator -->
+
+    <input id="firstNumber" type="text" placeholder="First Number" />
+    <select id="power">
+      <!-- <option value="operator">Operator</option> -->
+      <option id="add" value="add">Add</option>
+      <option id="subtract" value="subtract">Subtract</option>
+      <option id="multiply" value="multiply">Multiply</option>
+      <option id="division" value="division">Division</option>
+    </select>
+    <input id="secondNumber" type="text" placeholder="Second Number" />
+    <div>
+      <button onclick="something()">Sum</button>
+      <p id="answer"></p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      let firstNumb = document.getElementById("firstNumber").value;
+      let secondNumb = document.getElementById("secondNumber").value;
+      let power = document.getElementById("power").value;
+
+      let add = document.getElementById("add").value;
+      let subtract = document.getElementById("subtract").value;
+      let multiply = document.getElementById("multiply").value;
+      let division = document.getElementById("division").value;
+
+      function something() {
+        if (power == add) {
+          let totals = firstNumb + secondNumb;
+          document.getElementById("answer").innerHTML = totals;
+        }
+      }
+    </script>
+
     <script src="app.js"></script>
   </body>
 </html>
