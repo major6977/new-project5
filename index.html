@@ -49,30 +49,38 @@
       <option id="add" value="add">Add</option>
       <option id="subtract" value="subtract">Subtract</option>
       <option id="multiply" value="multiply">Multiply</option>
-      <option id="division" value="division">Division</option>
+      <option id="divide" value="divide">Division</option>
     </select>
     <input id="secondNumber" type="text" placeholder="Second Number" />
     <div>
-      <button onclick="something()">Sum</button>
+      <button onclick="calc()">Sum</button>
       <p id="answer"></p>
     </div>
 
     <!-- JavaScript -->
     <script>
-      let firstNumb = document.getElementById("firstNumber").value;
-      let secondNumb = document.getElementById("secondNumber").value;
-      let power = document.getElementById("power").value;
-
-      let add = document.getElementById("add").value;
-      let subtract = document.getElementById("subtract").value;
-      let multiply = document.getElementById("multiply").value;
-      let division = document.getElementById("division").value;
-
-      function something() {
-        if (power == add) {
-          let totals = firstNumb + secondNumb;
-          document.getElementById("answer").innerHTML = totals;
+      function calc() {
+        let firstNumb = parseInt(document.getElementById("firstNumber").value);
+        console.log(firstNumb);
+        let secondNumb = parseInt(
+          document.getElementById("secondNumber").value
+        );
+        console.log(secondNumb);
+        let power = document.getElementById("power").value;
+        console.log(power);
+        let add = document.getElementById("add").value;
+        let totals;
+        if (power == "add") {
+          totals = firstNumb + secondNumb;
+        } else if (power == "subtract") {
+          totals = firstNumb - secondNumb;
+        } else if (power == "multiply") {
+          totals = firstNumb * secondNumb;
+        } else if (power == "divide") {
+          totals = firstNumb / secondNumb;
         }
+
+        document.getElementById("answer").innerHTML = totals;
       }
     </script>
 
